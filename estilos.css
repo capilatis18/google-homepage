@@ -1,87 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 #nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
-
-#navul{
+.navul{
     list-style: none;
     display: flex;
+    padding: 13px;
     align-items: center;
-    margin-top: 3px;
-    margin-right: 26px;
 }
-
-#navul li{
-    display: inline-block;
+.navul li{
     padding: 7px;
-    font-size: 12px;
+    font-size: 0.9rem;
 }
-
-#navul li a{
-    text-decoration: none;    
+.navul li a{
+    text-decoration: none;
+    color: black;
 }
-
-#navul li a img{
-    width: 25px;
-}
-
 #principal{
+    min-height: 81vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#img{
+    /*left: 539px;*/
+    /*top: -9px;*/
+    max-width: 500px;
+}
+.barra{
     position: relative;
 }
 
-#img{
+.barra #span{
     position: absolute;
-    /*left: 539px;*/
-    /*top: -9px;*/
-    max-width: max-content;
+    padding-top: 30px;
+    padding-left: 10px;
+    color: #A5AAAF;
 }
-
 #buscador{
+    margin-top: 20px;
     border-radius: 24px;
     height: 44px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #A5AAAF;
     width: 584px;
-    max-width: 584px;
-    position: absolute;
-    top: 114px;
+    padding-left: 30px;
+    outline: 0;
     /*left: 350px;
    /* border-color: rgba(223,225,229,0);
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
     background-color: #fff;*/
 }
-
-#botones{
-    position: absolute;
-    top: 192px;
-    border-radius: 0px;   
+#botones input{
+    margin-top: 35px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #F8F9FA;
 }
 
 footer{
     display: flex;
     align-content: center;
-    position: absolute;
-    background: #E7ECEE;
-    width: 253vh;
-    padding: 30px 3px;
+    background: #F2F2F2;
+    padding: 20px 3px;
     /*min-height: calc(100vh - 10px);*/
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 380px;
 }
 
 p{
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
     padding: 50px;
 }
 footer a{
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+#buscador:hover{
+    box-shadow: 0.2px 0.2px 1px;
+}
+@media (max-width: 800px){
+    #buscador{
+        max-width: 500px;
+    }
 }
